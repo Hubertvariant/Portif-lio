@@ -4,34 +4,50 @@
     box-sizing: border-box;
 }
 
-#menu{
+.bar-menu{
     position: fixed;
-    width: 250px;
+    background-color: aqua;
+    width: 40px;
     height: 100%;
     top: 0;
     left: 0;
-    background: linear-gradient(red, purple, red);
-    overflow: hidden;
-    transition: 0.2s;
 }
-
-#menu #borda{
-    position: fixed;
-    width: 10px;
-    height: 100%;
-    top: 0;
-    left: 250px;
-    background-color: rgb(190, 206, 190);
-    text-align: center;
-    font-size: 9px;
-    transition: 0.2s;
-}
-
-#menu img{
-    position: absolute;
-    top: 15px;
-    left: 48px;
-    width: 150px;
+.bar-menu img{
+    position: relative;
+    top: 2px;
+    left: 2px;
     border-radius: 50%;
-    border: 2px solid white
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    box-shadow:0 0 15px 0.5px rgba(0, 0, 0, 0.4);
+    width: 35px;
+}
+
+.bar-menu img:hover{
+    cursor: pointer;
+}
+
+.menu{
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 40px;
+    width: 250px;
+    height: 100%;
+    background-color: rgb(235, 235, 235);
+    text-align: center;
+}
+
+.menu img{
+    position: relative;
+    top: 15px;
+    width: 180px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px 0.1px rgba(0, 0, 0, 0.4);
+    transition: 0.09s;
+}
+
+.menu img:hover{
+    transform: scale(1.1);
+    transition: 0.09s;
 }
