@@ -61,7 +61,7 @@ body{
     top: 60px;
     left: 2px;
     width: 35px;
-    font-size: 35px;
+    font-size: 33px;
     cursor: pointer;
     box-shadow: 1px 1px 1px 1px;
     border-radius: 2px;
@@ -69,7 +69,7 @@ body{
 
 .bar-menu #message:active{
     box-shadow: 1px 1px 1px 0.1px;
-    font-size: 33px;
+    font-size: 31px;
 }
 
 .bar-menu #project{
@@ -171,4 +171,5 @@ body{
     width: fit-content;
     max-width: 80%;
     word-wrap: break-word;
+
 }
