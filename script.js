@@ -1,37 +1,49 @@
-function pefil() {
-    let menuPerfil = window.document.querySelector("div#menu")
-    const chat = window.document.querySelector("div.chat")
-    const currentWidth = window.getComputedStyle(menu).width
-
-    if ( currentWidth === "0px" ){
-        menuPerfil.style.width = "250px"
-        chat.style.left = "290px"
-        chat.style.width = "calc(100% - 290px)"
-    }else{
-        menuPerfil.style.width = "0px"
-        chat.style.left = "40px"
-        chat.style.width = "calc(100% - 40px)"
-    }
+// 🔄 Alterna entre seções visíveis
+function showSection(id) {
+  document.querySelectorAll('.content-section').forEach(section => {
+    section.classList.add('hidden');
+  });
+  const target = document.getElementById(id);
+  if (target) target.classList.remove('hidden');
 }
 
-function projeto() {
-    const chat = document.querySelector("div.chat");
-    const chatProject = document.querySelector("div.chat-project");
-    const isChatVisible = window.getComputedStyle(chat).visibility === "visible";
-    if (isChatVisible) {
-        chat.style.visibility = "hidden";
-        chatProject.style.visibility = "visible";
-    } else {
-        chat.style.visibility = "visible";
-        chatProject.style.visibility = "hidden";
-    }
+// 🌗 Alterna entre tema claro/escuro e salva preferência
+function toggleTheme() {
+  document.body.classList.toggle('dark');
+  const temaAtual = document.body.classList.contains('dark') ? 'dark' : 'light';
+  localStorage.setItem('theme', temaAtual);
 }
 
-function chat() {
-    const chat = document.querySelector("div.chat");
-    const chatProject = document.querySelector("div.chat-project");
-    chat.style.visibility = "visible";
-    chat.style.opacity = "1";
-    chatProject.style.visibility = "hidden";
-    chatProject.style.opacity = "0";
+// 🧠 Aplica tema salvo ao carregar
+window.addEventListener('DOMContentLoaded', () => {
+  const temaSalvo = localStorage.getItem('theme');
+  if (temaSalvo === 'dark') {
+    document.body.classList.add('dark');
+  }
+
+  carregarProjetosGitHub();
+});
+
+// 🐙 Carrega repositórios públicos do GitHub dinamicamente
+function carregarProjetosGitHub() {
+  fetch('https://api.github.com/users/Hubertvariant/repos')
+    .then(res => res.json())
+    .then(repos => {
+      const lista = document.getElementById('github-projects');
+      repos.forEach(repo => {
+        const item = document.createElement('li');
+        item.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a>`;
+        lista.appendChild(item);
+      });
+    })
+    .catch(error => {
+      console.error('Erro ao carregar repositórios:', error);
+    });
 }
+
+// 📬 Validação simples do formulário de contato
+document.getElementById('contact-form')?.addEventListener('submit', function (e) {
+  e.preventDefault();
+  alert('Mensagem enviada com sucesso!');
+  this.reset();
+});

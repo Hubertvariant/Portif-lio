@@ -1,114 +1,132 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hubert Prado Ramos - Portifólio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio de Hubert Ramos</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" />
 </head>
 <body>
-    <div class="conteiner">
-        <nav class="bar-menu">
-            <div onclick="pefil()">
-                <img id="perfil" src="foto.jpg" alt="Perfil">
-            </div>
-            <p id="message" onclick="chat()" class="fa-solid fa-message"></p>
-            <p id="project" onclick="projeto()" class="fa-solid fa-diagram-project"></p>
-            <p id="contact" class="fa-solid fa-phone"></p>
-        </nav>
-        <div class="menu" id="menu">
-            <p><img id="perfil" src="foto.jpg" alt="Perfil"></p>
-            <p>Hubert Prado Ramos</p>
-        </div>
-
-        <!--Menu conversa-->
-
-        <div class="chat">
-            <div class="chat-box-ux">
-                Hubert Prado Ramos, quem é você?
-            </div>
-            <div class="chat-box-ux">
-                O que despertou seu interesse inicial por tecnologia e programação?
-            </div>
-            <div class="chat-box-my">
-                <p>Sou um estudante de 17 anos, atualmente cursando o 2º ano do ensino médio, com uma paixão crescente por desenvolvimento de software.</p>
-            </div>
-            <div class="chat-box-my">
-                Meu interesse por tecnologia começou com a curiosidade pelas linhas de código, e desde então venho me dedicando intensamente ao aprendizado e à prática.
-            </div>
-            <div class="chat-box-my">
-                Cada novo conceito que descubro alimenta ainda mais minha vontade de criar, inovar e transformar ideias em soluções reais.
-            </div>
-            <div class="chat-box-ux">
-                Que tipo de projetos você costuma desenvolver?
-            </div>
-            <div class="chat-box-my">
-                <p>Atualmente, desenvolvo projetos front-end na escola, utilizando ferramentas modernas e boas práticas de design responsivo.</p>
-            </div>
-            <div class="chat-box-ux">
-                <p>Fora da escola, você continua aprendendo sobre desenvolvimento?</p>
-            </div>
-            <div class="chat-box-ux">
-                <p>Quais linguagens de programação você tem explorado por conta própria?</p>
-            </div>
-            <div class="chat-box-my">
-                <p>Fora do ambiente escolar, estudo de forma independente, explorando linguagens como JavaScript e Python.</p>
-            </div>
-            <div class="chat-box-ux">
-                <p>Onde você mora atualmente?</p>
-            </div>
-            <div class="chat-box-my">
-                <p>Resido em Arapongas, Paraná, e estudo no Colégio Estadual Unidade Polo, onde venho aprimorando minhas habilidades técnicas e criativas.</p>
-            </div>
-        </div>
-        
-        <!--Menu Projeto-->
-
-        <div class="chat-project">
-            <div class="chat-box-my">
-
-            </div>
-            
-            <div class="chat-box-my">
-                <a href="https://hubertvariant.github.io/Transquor-/index.html">Transquor</a>
-            </div>
-            <div class="chat-box-my">
-                <a href="https://hubertvariant.github.io/Teste-para-a-Cantina/index.html">Cantina</a>
-            </div>
-            <div class="chat-box-my">
-                <a href="https://hubertvariant.github.io/Meios-de-produ-o-/Index.html">Meios-de-produ-o-</a>
-            </div>
-            <div class="chat-box-my">
-                <a href="https://hubertvariant.github.io/Tabuada-/model.html">Tabuada</a>
-            </div>
-            <div class="chat-box-my">
-                <a href="https://hubertvariant.github.io/Aprendendo-a-contar/model.html">Aprendendo-a-contar</a>
-            </div>
-            <div class="chat-box-my">
-                <a href="https://hubertvariant.github.io/Verificador-de-idade/model.html">Verificador-de-idade</a>
-            </div>
-            <div class="chat-box-my">
-                <a href="https://hubertvariant.github.io/Hora-do-Dia/model.html">Hora-do-Dia</a>
-            </div>
-            <div class="chat-box-my">
-                <a href="https://hubertvariant.github.io/time-B/paginas/index.html">time-B</a>
-            </div>
-            <div class="chat-box-my">
-                <a href="https://hubertvariant.github.io/Cart-o-Morango-do-Amor/">Cart-o-Morango-do-Amor</a>
-            </div>
-            <div class="chat-box-my">
-                <a href="https://hubertvariant.github.io/estado/index.html">estado</a>
-            </div>
-            <div class="chat-box-my">
-                <a href="https://hubertvariant.github.io/meusite/index.html">meusite</a>
-            </div>
-        </div>
-
-        <!--Menu Contato-->
-
+  <aside class="sidebar" aria-label="Menu lateral">
+    <div class="profile-icon" onclick="showSection('perfil')" aria-label="Perfil">
+      <img src="foto.jpg" alt="Foto de Hubert Ramos" />
     </div>
-</body>
-<script src="script.js"></script>
+    <button onclick="showSection('apresentacao')" aria-label="Apresentação"><i class="fas fa-user"></i></button>
+    <button onclick="showSection('projetos')" aria-label="Projetos"><i class="fas fa-folder-open"></i></button>
+    <button onclick="showSection('contato')" aria-label="Contato"><i class="fas fa-envelope"></i></button>
+    <button onclick="toggleTheme()" aria-label="Alternar tema"><i class="fas fa-adjust"></i></button>
+  </aside>
 
+  <main>
+    <section id="perfil" class="content-section" aria-labelledby="perfil-title">
+      <div class="perfil">
+        <img src="foto.jpg" alt="Foto de Hubert Ramos" />
+        <h2 id="perfil-title">Hubert Prado Ramos</h2>
+        <h3>Resumo</h3>
+        <p>Sou um estudante de 17 anos, cursando o 2º ano do ensino médio com formação técnica em Desenvolvimento de Sistemas.</p>
+        <p>Resido em Arapongas, Paraná, e estudo no Colégio Estadual Unidade Polo.</p>
+        <h3>Habilidades</h3>
+        <ul class="skills-list">
+          <li><i class="fab fa-html5"></i> HTML</li>
+          <li><i class="fab fa-css3-alt"></i> CSS</li>
+          <li><i class="fab fa-js"></i> JavaScript</li>
+          <li><i class="fab fa-python"></i> Python</li>
+          <li><i class="fas fa-database"></i> Banco de Dados</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="apresentacao" class="content-section hidden" aria-labelledby="apresentacao-title">
+      <div class="chat">
+        <h2 id="apresentacao-title" class="visually-hidden">Apresentação</h2>
+        <div class="mensagem entrevistador">Olá Hubert! Pode se apresentar?</div>
+        <div class="mensagem entrevistado">Sou um estudante apaixonado por desenvolvimento e tecnologia.</div>
+        <div class="mensagem entrevistado">Comecei com curiosidade por código e hoje estudo intensamente para transformar ideias em soluções reais.</div>
+        <div class="mensagem entrevistador">Que tipo de projetos você costuma desenvolver?</div>
+        <div class="mensagem entrevistado">Projetos front-end com HTML, CSS, JavaScript e design responsivo.</div>
+        <div class="mensagem entrevistador">Fora da escola, você continua aprendendo?</div>
+        <div class="mensagem entrevistado">Sim! Estudo por conta própria, explorando JavaScript e Python.</div>
+        <div class="mensagem entrevistador">Onde você mora atualmente?</div>
+        <div class="mensagem entrevistado">Em Arapongas, Paraná, estudando no Colégio Estadual Unidade Polo.</div>
+      </div>
+    </section>
+
+    <section id="projetos" class="content-section hidden" aria-labelledby="projetos-title">
+  <div class="chat">
+    <h2 id="projetos-title">Meus Projetos</h2>
+    <p class="mensagem entrevistado">Aqui estão alguns dos meus trabalhos desenvolvidos com HTML, CSS e JavaScript:</p>
+
+    <div class="projetos-grid">
+      <a href="https://hubertvariant.github.io/Transquor-/index.html" class="projeto-card">
+        <i class="fas fa-globe"></i>
+        <span>Transquor</span>
+      </a>
+      <a href="https://hubertvariant.github.io/Teste-para-a-Cantina/index.html" class="projeto-card">
+        <i class="fas fa-utensils"></i>
+        <span>Cantina</span>
+      </a>
+      <a href="https://hubertvariant.github.io/Meios-de-produ-o-/Index.html" class="projeto-card">
+        <i class="fas fa-industry"></i>
+        <span>Meios de Produção</span>
+      </a>
+      <a href="https://hubertvariant.github.io/Tabuada-/model.html" class="projeto-card">
+        <i class="fas fa-calculator"></i>
+        <span>Tabuada</span>
+      </a>
+      <a href="https://hubertvariant.github.io/Aprendendo-a-contar/model.html" class="projeto-card">
+        <i class="fas fa-child"></i>
+        <span>Aprendendo a Contar</span>
+      </a>
+      <a href="https://hubertvariant.github.io/Verificador-de-idade/model.html" class="projeto-card">
+        <i class="fas fa-user-check"></i>
+        <span>Verificador de Idade</span>
+      </a>
+      <a href="https://hubertvariant.github.io/Hora-do-Dia/model.html" class="projeto-card">
+        <i class="fas fa-clock"></i>
+        <span>Hora do Dia</span>
+      </a>
+      <a href="https://hubertvariant.github.io/time-B/paginas/index.html" class="projeto-card">
+        <i class="fas fa-users"></i>
+        <span>Time B</span>
+      </a>
+      <a href="https://hubertvariant.github.io/Cart-o-Morango-do-Amor/" class="projeto-card">
+        <i class="fas fa-heart"></i>
+        <span>Morango do Amor</span>
+      </a>
+      <a href="https://hubertvariant.github.io/estado/index.html" class="projeto-card">
+        <i class="fas fa-map"></i>
+        <span>Estado</span>
+      </a>
+      <a href="https://hubertvariant.github.io/meusite/index.html" class="projeto-card">
+        <i class="fas fa-laptop-code"></i>
+        <span>Meu Site</span>
+      </a>
+    </div>
+
+    <div class="respostas">
+      <button onclick="window.location.href='https://github.com/Hubertvariant'"><strong>Ver GitHub Completo</strong></button>
+    </div>
+  </div>
+</section>
+
+    <section id="contato" class="content-section hidden" aria-labelledby="contato-title">
+      <div class="chat">
+        <h2 id="contato-title">Contato</h2>
+        <form id="contact-form">
+          <input type="text" placeholder="Seu nome" required />
+          <input type="email" placeholder="Seu e-mail" required />
+          <textarea placeholder="Sua mensagem" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+        <p>Ou me encontre em:</p>
+        <a href="https://www.linkedin.com/in/hubert-prado-ramos-10041830a"><i class="fab fa-linkedin"></i> LinkedIn</a><br />
+        <a href="https://github.com/Hubertvariant"><i class="fab fa-github"></i> GitHub</a><br />
+        <a href="mailto:hubertpradoramos0@email.com"><i class="fas fa-envelope"></i> Email</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>
