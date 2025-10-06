@@ -281,16 +281,66 @@ form button:hover {
 /* ===================== */
 /* 📱 RESPONSIVO */
 /* ===================== */
+@media (max-width: 900px) {
+  .chat {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  .perfil img {
+    width: 120px;
+  }
+
+  .sidebar {
+    width: 60px;
+  }
+
+  .sidebar button {
+    font-size: 1.2rem;
+  }
+
+  .skills-list {
+    gap: 0.5rem;
+  }
+
+  .projetos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
+
 @media (max-width: 600px) {
   .sidebar {
-    flex-direction: row;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 60px;
+    background-color: var(--accent);
+    flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    z-index: 1000;
   }
+
+  .profile-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.profile-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid white;
+}
 
   main {
     padding: 1rem;
+    padding-top: 70px; 
   }
 
   .mensagem {
@@ -299,5 +349,57 @@ form button:hover {
 
   .perfil img {
     width: 100px;
+  }
+
+  .skills-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projetos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projeto-card {
+    padding: 0.75rem;
+  }
+
+  form input,
+  form textarea {
+    font-size: 0.9rem;
+  }
+
+  form button {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .respostas button {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar button {
+    font-size: 1rem;
+    margin: 0.5rem;
+  }
+
+  .perfil img {
+    width: 80px;
+  }
+
+  .skills-list li {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .projeto-card {
+    font-size: 0.9rem;
+  }
+
+  .chat {
+    padding: 0.5rem;
   }
 }
