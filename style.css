@@ -93,6 +93,10 @@ main {
   margin-bottom: 1rem;
 }
 
+.control-audio{
+  border-radius: 15px;
+}
+
 .skills-list {
   list-style: none;
   padding: 0;
@@ -403,3 +407,4 @@ form button:hover {
     padding: 0.5rem;
   }
 }
+
