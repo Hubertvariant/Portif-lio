@@ -4,15 +4,15 @@
 :root {
   --bg: #ffffff;
   --text: #333333;
-  --accent: #ff6f00;
-  --light: #ffe0b2;
+  --accent: #475ac4;
+  --light: #b2d1ff;
   --shadow: rgba(0, 0, 0, 0.1);
 }
 
 body.dark {
   --bg: #1e1e1e;
   --text: #f0f0f0;
-  --accent: #ff9800;
+  --accent: #475ac4;
   --light: #333333;
   --shadow: rgba(255, 255, 255, 0.1);
 }
@@ -91,10 +91,6 @@ main {
   width: 150px;
   border-radius: 50%;
   margin-bottom: 1rem;
-}
-
-.control-audio{
-  border-radius: 15px;
 }
 
 .skills-list {
